@@ -1,0 +1,207 @@
+$color1: #000
+$color2: #CC9999
+    
+html,
+body
+    height: 100vh    
+    
+body
+    display: flex
+    font-size: 16px
+    font-family: "Avenir", sans-serif
+    -ms-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale    
+    align-items: center    
+    @media only screen and (max-width: 991px)
+        flex-direction: column
+
+a,
+a:hover,
+a:focus,
+a:active
+    text-decoration: none
+
+*
+    margin: 0
+    padding: 0
+
+.left
+    flex: 0 1 50%
+    max-width: 50%
+    flex-shrink: 0
+    background: url('../img/bg.png') no-repeat top center
+    background-size: 100%
+    height: 100%
+    @media only screen and (max-width: 1799px)
+        background-size: cover
+    @media only screen and (max-width: 991px)
+        max-width: 100%
+        height: 437px
+        width: 100%
+    img
+        width: 100%
+        height: 100%
+        object-fit: fill
+        display: block
+
+.right
+    flex: 0 1 50%
+    flex-shrink: 0
+    max-width: 50%   
+    @media only screen and (max-width: 991px)
+        max-width: 100%   
+        margin-top: -300px  
+    @media only screen and (max-width: 767px)
+        margin-top: -200px
+    .head-area
+        padding: 96px 106px 95px 120px
+        @media only screen and (max-width: 1099px)
+            padding: 40px 80px
+        @media only screen and (max-width: 991px)
+            padding: 24px 24px 32px 24px
+    .arrow-container
+        display: flex
+        justify-content: end
+        padding: 0 106px 0 120px
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(0, -50%)
+        z-index: 99
+        @media only screen and (max-width: 991px)
+            display: none
+        button
+            width: 40px
+            height: 40px
+            display: flex
+            align-items: center
+            justify-content: center
+            border: 1px solid rgba(0,0,0,.10)
+            background: none
+            cursor: pointer
+    .title
+        font-size: 1.9531rem
+        font-weight: 700
+        font-family: 'ITC Avant Garde Pro Md'
+        line-height: 40px
+        max-width: 494px
+        @media only screen and (max-width: 991px)
+            color: #fff
+            font-size: 1.25rem
+            line-height: 26px
+    .description
+        margin: 12px 0 32px
+        max-width: 432px
+        line-height: 25.6px
+        @media only screen and (max-width: 991px)
+            display: none
+    .button
+        font-weight: 900
+        font-size: .8rem
+        color: $color1
+        padding-bottom: 5px
+        border-bottom: 1px solid $color1
+        line-height: 17.48px
+        display: inline-block
+        @media only screen and (max-width: 991px)
+            color: #fff
+            margin-top: 16px
+            border-color: #fff
+    .content
+        margin-top: 68px
+        overflow: hidden
+        position: relative
+        @media only screen and (max-width: 1099px)
+            margin-top: 20px
+    .slick-slide
+        margin: 0 32px
+        @media only screen and (max-width: 991px)
+            margin: 0 12px
+    .slick-list
+        margin: 0 -32px   
+        padding-left: 120px
+        padding-right: 32px   
+        @media only screen and (max-width: 1099px)
+            padding-left: 80px  
+        @media only screen and (max-width: 991px)
+            margin: 0 -12px
+            padding-left: 24px
+            padding-right: 24px
+        .item
+            .image
+                width: 100%
+                max-height: 310px
+                height: auto
+                object-fit: cover
+            .item-title
+                margin: 12px 0 4px
+                font-size: .8rem
+                line-height: 20.48px
+            .meta
+                display: flex
+                align-items: center
+                .price
+                    font-weight: 500
+                    font-size: .8rem
+                .colors
+                    display: flex
+                    margin-left: auto
+                    gap: 8px
+                    .radio
+                        display: flex
+                        position: relative
+                        .item-label
+                            width: 12px
+                            height: 12px
+                            position: relative
+                            input
+                                position: absolute
+                                top: 0
+                                left: 0
+                                opacity: 0
+                                &:checked + span:before
+                                    border-color: $color1
+                                &:checked + span:after
+                                    top: 3px 
+                                    left: 3px
+                                    right: 3px
+                                    bottom: 3px
+                            span
+                                display: block
+                                width: 12px
+                                height: 12px
+                                border-radius: 12px
+                                position: relative
+                                &.color-1
+                                    &:after
+                                        background: #99C3CC !important
+                                &.color-2
+                                    &:after
+                                        background: #CC9999 !important
+                                &.color-3
+                                    &:after
+                                        background: #CB99CC !important
+                                &.color-4
+                                    &:after
+                                        background: #A6CC99 !important
+                                &:after
+                                    content: ""
+                                    position: absolute
+                                    border-radius: 100%
+                                    top: 0
+                                    left: 0
+                                    right: 0
+                                    bottom: 0
+                                &:before
+                                    content: ""
+                                    position: absolute
+                                    top: 0
+                                    left: 0
+                                    right: 0
+                                    bottom: 0
+                                    width: 8px
+                                    height: 8px
+                                    border: 2px solid transparent
+                                    border-radius: 12px
